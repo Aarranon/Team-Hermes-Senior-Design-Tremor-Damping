@@ -7,8 +7,12 @@ generate a plot based on inputted motor data. It is not a comprehensive motor se
 the scope of this project. Instead, it is intended to show how a particular motor would align with our intended
 actuation solution, a series of mechanical links that are actuated to dampen tremors
 
-##Controller
+## Controller
 **Controller** contains the matlab/simulink code that actually runs the simulation we designed. Our report contains the details
 on the theory, but this is the code we used (along with the data) to generate our results. 
+
+## Visualization
+**Visulaization** contains the Blendr files and the code required to visualize our system's results in a more comfortable
+form compared to the graph outputs of the MATLAB scripts
 
 ## How to Set Up the System: 
