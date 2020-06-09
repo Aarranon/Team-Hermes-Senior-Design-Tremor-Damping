@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.46"
+    ComputedModelVersion    "1.47"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -162,19 +162,6 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  11
-	  Type			  "GLUE2:SpreadSheet"
-	  ID			  "ModelData"
-	  Visible		  [0]
-	  CreateCallback	  "DataView.createSpreadSheetComponent"
-	  UserData		  ""
-	  Floating		  [1]
-	  DockPosition		  "Bottom"
-	  Width			  [256]
-	  Height		  [192]
-	  Minimized		  "Unset"
-	}
-	Object {
-	  $ObjectID		  12
 	  Type			  "GLUE2:PropertyInspector"
 	  ID			  "Property Inspector"
 	  Visible		  [0]
@@ -182,6 +169,19 @@ Model {
 	  UserData		  ""
 	  Floating		  [0]
 	  DockPosition		  "Right"
+	  Width			  [256]
+	  Height		  [192]
+	  Minimized		  "Unset"
+	}
+	Object {
+	  $ObjectID		  12
+	  Type			  "GLUE2:SpreadSheet"
+	  ID			  "ModelData"
+	  Visible		  [0]
+	  CreateCallback	  "DataView.createSpreadSheetComponent"
+	  UserData		  ""
+	  Floating		  [1]
+	  DockPosition		  "Bottom"
 	  Width			  [256]
 	  Height		  [192]
 	  Minimized		  "Unset"
@@ -211,9 +211,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Aarranon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jun 08 21:22:45 2020"
-  RTWModifiedTimeStamp	  513551921
-  ModelVersionFormat	  "1.%<AutoIncrement:46>"
+  LastModifiedDate	  "Mon Jun 08 21:29:39 2020"
+  RTWModifiedTimeStamp	  513552574
+  ModelVersionFormat	  "1.%<AutoIncrement:47>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -2137,11 +2137,11 @@ Model {
     }
     Line {
       Name		      "Hand Acceleration"
-      ZOrder		      691
+      ZOrder		      772
       Labels		      [0, 0]
       SrcBlock		      "Measured Data (Hand Motion)"
       SrcPort		      1
-      Points		      [112, 0]
+      Points		      [100, 0; 0, -19]
     }
     Line {
       ZOrder		      742
@@ -2152,11 +2152,11 @@ Model {
     }
     Line {
       Name		      "Motor Angular Velocity"
-      ZOrder		      766
+      ZOrder		      773
       Labels		      [1, 1]
       SrcBlock		      "Sum4"
       SrcPort		      1
-      Points		      [234, 0; 0, 155]
+      Points		      [238, 0; 0, 155]
       DstBlock		      "Input \n(measured angular velocity of motor)"
       DstPort		      1
     }
