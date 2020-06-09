@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.42"
+    ComputedModelVersion    "1.45"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -35,7 +35,7 @@ Model {
     ExternalFileReference {
       Reference		      "simulink/Continuous/PID Controller"
       Path		      "TremorStabilizingSimulation/PID Controller"
-      SID		      "185"
+      SID		      "231"
       Type		      "LIBRARY_BLOCK"
     }
     OrderedModelArguments   1
@@ -96,23 +96,12 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [3752.0, 1651.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [-250.92454686672693, -301.99323830292627]
-	  SceneRectInView	  [-250.92454686672693, -301.99323830292627, 1200.64, 528.32]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-640.43427662193346, -363.1595771211696]
+	  SceneRectInView	  [-640.43427662193346, -363.1595771211696, 1500.8, 660.4]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "106"
-	  Extents		  [3752.0, 1651.0]
-	  ZoomFactor		  [0.5]
-	  Offset		  [-1039.6085714285698, -396.37809523809506]
-	  SceneRectInView	  [-1039.6085714285698, -396.37809523809506, 3001.6, 1320.8]
-	}
-	Object {
-	  $ObjectID		  7
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -121,6 +110,17 @@ Model {
 	  ZoomFactor		  [1.75]
 	  Offset		  [-142.38867196813328, -143.63297869538877]
 	  SceneRectInView	  [-142.38867196813328, -143.63297869538877, 857.6, 377.37142857142857]
+	}
+	Object {
+	  $ObjectID		  7
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "106"
+	  Extents		  [3752.0, 1651.0]
+	  ZoomFactor		  [0.5]
+	  Offset		  [-1039.6085714285698, -396.37809523809506]
+	  SceneRectInView	  [-1039.6085714285698, -396.37809523809506, 3001.6, 1320.8]
 	}
 	Object {
 	  $ObjectID		  8
@@ -169,8 +169,8 @@ Model {
 	  UserData		  ""
 	  Floating		  [0]
 	  DockPosition		  "Right"
-	  Width			  [300]
-	  Height		  [28]
+	  Width			  [256]
+	  Height		  [192]
 	  Minimized		  "Unset"
 	}
 	Object {
@@ -182,17 +182,17 @@ Model {
 	  UserData		  ""
 	  Floating		  [1]
 	  DockPosition		  "Bottom"
-	  Width			  [1532]
-	  Height		  [118]
+	  Width			  [256]
+	  Height		  [192]
 	  Minimized		  "Unset"
 	}
 	PropName		"DockComponentsInfo"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAADdfwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAeQAAA3UAAADwAP///wAAAAEAAAJ5AAAG3fwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAeQAAA3UAAAEAAP///wAAAAEAAAJ5AAAG3fwCA"
       "AAAAfwAAAEuAAAG3QAAAAAA////+v////8CAAAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvA"
-      "FAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AAAAYwD///8AAAADAAAPAAAAAWf8AQAAAAH7AAAANgBHAEwAVQBFA"
+      "FAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AAAAiAD///8AAAADAAAPAAAAAWf8AQAAAAH7AAAANgBHAEwAVQBFA"
       "DIAOgBTAHAAcgBlAGEAZABTAGgAZQBlAHQALwBNAG8AZABlAGwARABhAHQAYQIAAAAAAAAGSAAADwAAAAFtAAAPAAAABt0AAAABAAAAAgAAAAEAA"
       "AAC/AAAAAA="
       Array {
@@ -211,9 +211,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Aarranon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jun 07 21:10:43 2020"
-  RTWModifiedTimeStamp	  513465041
-  ModelVersionFormat	  "1.%<AutoIncrement:42>"
+  LastModifiedDate	  "Mon Jun 08 19:33:28 2020"
+  RTWModifiedTimeStamp	  513545212
+  ModelVersionFormat	  "1.%<AutoIncrement:45>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -331,7 +331,7 @@ Model {
 	  Description		  ""
 	  Components		  []
 	  StartTime		  "0.0"
-	  StopTime		  "15"
+	  StopTime		  "500"
 	  AbsTol		  "auto"
 	  AutoScaleAbsTol	  on
 	  FixedStep		  "auto"
@@ -1147,6 +1147,41 @@ Model {
       PreserveConstantTs      off
     }
     Block {
+      BlockType		      DiscreteTransferFcn
+      NumeratorSource	      "Dialog"
+      Numerator		      "[1]"
+      DenominatorSource	      "Dialog"
+      Denominator	      "[1 0.5]"
+      InitialStatesSource     "Dialog"
+      InitialStates	      "0"
+      InputProcessing	      "Elements as channels (sample based)"
+      ExternalReset	      "None"
+      InitialDenominatorStates "0"
+      FilterStructure	      "Direct form II"
+      SampleTime	      "-1"
+      a0EqualsOne	      off
+      NumCoefMin	      "[]"
+      NumCoefMax	      "[]"
+      DenCoefMin	      "[]"
+      DenCoefMax	      "[]"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      StateDataTypeStr	      "Inherit: Same as input"
+      MultiplicandDataTypeStr "Inherit: Same as input"
+      NumCoefDataTypeStr      "Inherit: Inherit via internal rule"
+      DenCoefDataTypeStr      "Inherit: Inherit via internal rule"
+      NumProductDataTypeStr   "Inherit: Inherit via internal rule"
+      DenProductDataTypeStr   "Inherit: Inherit via internal rule"
+      NumAccumDataTypeStr     "Inherit: Inherit via internal rule"
+      DenAccumDataTypeStr     "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
       BlockType		      FromSpreadsheet
       FileName		      "untitled.xlsx"
       SheetName		      "Sheet1"
@@ -1172,6 +1207,14 @@ Model {
       LockScale		      off
       RndMeth		      "Floor"
       SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      MATLABFcn
+      MATLABFcn		      "sin"
+      OutputDimensions	      "-1"
+      OutputSignalType	      "auto"
+      Output1D		      on
       SampleTime	      "-1"
     }
     Block {
@@ -1293,14 +1336,6 @@ Model {
       Decimation	      "1"
       SampleTime	      "-1"
     }
-    Block {
-      BlockType		      TransferFcn
-      Numerator		      "[1]"
-      Denominator	      "[1 2 1]"
-      AbsoluteTolerance	      "auto"
-      ContinuousStateAttributes	"''"
-      Realization	      "auto"
-    }
   }
   System {
     Name		    "TremorStabilizingSimulation"
@@ -1319,9 +1354,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "214"
+    SIDHighWatermark	    "233"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Reference
@@ -1390,14 +1425,44 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      TransferFcn
+      BlockType		      DiscreteTransferFcn
       Name		      "High Pass Filter\nTransfer Function"
-      SID		      "138"
+      SID		      "233"
+      Ports		      [1, 1]
       Position		      [165, 172, 225, 208]
-      ZOrder		      408
+      ZOrder		      511
       BlockMirror	      on
-      Numerator		      "[1 0]"
-      Denominator	      "[1 2*2*3.75*pi (2*3.75*pi)^2]"
+      InputPortMap	      "u0"
+      Numerator		      "[0.000000000000000 0.007900812829378 -0.007900812829378 ]"
+      Denominator	      "[1.000000000000000 -1.580162565875511 0.624228433648570 ]"
+      SampleTime	      "0.0100000000000000002"
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		28
+	$ClassName		"Simulink.Mask"
+	Type			"DiscretizedDiscreteTransferFcn"
+	Initialization		"%zoh"
+      }
+    }
+    Block {
+      BlockType		      MATLABFcn
+      Name		      "Interpreted MATLAB\nFunction"
+      SID		      "215"
+      Ports		      [1]
+      Position		      [590, -180, 660, -150]
+      ZOrder		      494
+      MATLABFcn		      "writeInputToFile"
+      OutputDimensions	      "0"
+    }
+    Block {
+      BlockType		      MATLABFcn
+      Name		      "Interpreted MATLAB\nFunction1"
+      SID		      "216"
+      Ports		      [1]
+      Position		      [590, 40, 660, 70]
+      ZOrder		      495
+      MATLABFcn		      "writeOutputToFile"
+      OutputDimensions	      "0"
     }
     Block {
       BlockType		      SubSystem
@@ -1497,7 +1562,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"136"
+	ZoomFactor		"175"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  FromSpreadsheet
@@ -1531,10 +1596,10 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "PID Controller"
-      SID		      "185"
+      SID		      "231"
       Ports		      [1, 1]
       Position		      [-5, 32, 35, 68]
-      ZOrder		      489
+      ZOrder		      509
       LibraryVersion	      "1.453"
       SourceBlock	      "simulink/Continuous/PID Controller"
       SourceType	      "PID 1dof"
@@ -1548,16 +1613,16 @@ Model {
       ContentPreviewEnabled   on
       Controller	      "PID"
       Form		      "Parallel"
-      TimeDomain	      "Continuous-time"
-      SampleTime	      "-1"
+      TimeDomain	      "Discrete-time"
+      SampleTime	      "0.0100000000000000002"
       IntegratorMethod	      "Forward Euler"
       FilterMethod	      "Forward Euler"
       ControllerParametersSource "internal"
-      P			      "25"
-      I			      "0"
-      D			      "25"
+      P			      "25.000000000000000"
+      I			      "0.000000000000000"
+      D			      "26.270829861937610"
       UseFilter		      on
-      N			      "10"
+      N			      "9.516258196404047"
       TunerSelectOption	      "Frequency Response Based"
       ZeroCross		      on
       InitialConditionSource  "internal"
@@ -1684,7 +1749,7 @@ Model {
       IdealPVariant	      "Disabled"
       IVariant		      "InternalParameters"
       DVariant		      "InternalParameters"
-      IntegratorVariant	      "Continuous"
+      IntegratorVariant	      "Discrete"
       SatVariant	      "Disabled"
       AWVariant		      "Passthrough"
       PCopyVariant	      "Disabled"
@@ -1692,7 +1757,7 @@ Model {
       FdbkBlocksVariant	      "Forward"
       IdealPFdbkVariant	      "Disabled"
       SatFdbkVariant	      "Disabled"
-      DerivativeFilterVariant "ContFilter"
+      DerivativeFilterVariant "ForwardEulerFilter"
       NVariant		      "InternalParameters"
       NCopyVariant	      "Disabled"
       FilterICVariant	      "InternalICsFilter"
@@ -1706,23 +1771,37 @@ Model {
     Block {
       BlockType		      Sin
       Name		      "Sine Wave\nFunction"
-      SID		      "187"
+      SID		      "230"
       Ports		      [0, 1]
       Position		      [25, -305, 55, -275]
-      ZOrder		      464
+      ZOrder		      508
       Frequency		      "10*pi"
       Phase		      "54"
-      SampleTime	      "0"
+      SampleTime	      "0.0100000000000000002"
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		29
+	$ClassName		"Simulink.Mask"
+	Type			"DiscretizedSource"
+	Initialization		"%zoh"
+      }
     }
     Block {
       BlockType		      Sin
       Name		      "Sine Wave\nFunction1"
-      SID		      "188"
+      SID		      "229"
       Ports		      [0, 1]
       Position		      [-25, -240, 5, -210]
-      ZOrder		      465
+      ZOrder		      507
       Frequency		      "2*2*pi"
-      SampleTime	      "0"
+      SampleTime	      "0.0100000000000000002"
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		30
+	$ClassName		"Simulink.Mask"
+	Type			"DiscretizedSource"
+	Initialization		"%zoh"
+      }
     }
     Block {
       BlockType		      Sum
@@ -1796,7 +1875,7 @@ Model {
       Name		      "To File"
       SID		      "209"
       Ports		      [1]
-      Position		      [505, -125, 565, -95]
+      Position		      [650, -130, 710, -100]
       ZOrder		      492
       Filename		      "Output/SystemInputData.mat"
       MatrixName	      "data"
@@ -1814,13 +1893,23 @@ Model {
       SaveFormat	      "Timeseries"
     }
     Block {
-      BlockType		      TransferFcn
+      BlockType		      DiscreteTransferFcn
       Name		      "Transfer Fcn"
-      SID		      "176"
+      SID		      "228"
+      Ports		      [1, 1]
       Position		      [115, 32, 175, 68]
-      ZOrder		      457
-      Numerator		      "[1 0]"
-      Denominator	      "[1 0 100*pi*pi ]"
+      ZOrder		      506
+      InputPortMap	      "u0"
+      Numerator		      "[0.000000000000000 0.009836316430835 -0.009836316430835 ]"
+      Denominator	      "[1.000000000000000 -1.902113032590307 1.000000000000000 ]"
+      SampleTime	      "0.0100000000000000002"
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		31
+	$ClassName		"Simulink.Mask"
+	Type			"DiscretizedDiscreteTransferFcn"
+	Initialization		"%zoh"
+      }
     }
     Block {
       BlockType		      Constant
@@ -1843,31 +1932,25 @@ Model {
 	ListType		IOSignalStrings
 	set0ParseKeys		"8,7"
 	set0Sigs		"Gain1:o1Sum1:o1"
-	set1ParseKeys		"15"
-	set1Sigs		"Transfer Fcn:o1"
       }
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
-      "nYLimReal','-3.34676','MaxYLimReal','3.3331','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','3.34676','Lege"
-      "ndVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862745"
-      "09803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.62352941"
-      "1764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.71764705"
-      "8823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabe"
-      "l>','LinePropertiesCache',{{struct('Visible','on'),struct('Visible','on'),struct('Visible','on')}},'UserDefinedC"
-      "hannelNames',{{}},'NumLines',2,'LineNames',{{'Gain1','Joint Angles'}},'ShowContent',true,'Placement',1),struct('"
-      "MinYLimReal','-1.99538','MaxYLimReal','1.98534','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.46282','L"
-      "egendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862"
-      "74509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.62352"
-      "9411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.71764"
-      "7058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalL"
-      "abel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Transfer Fcn'}},'Sh"
-      "owContent',true,'Placement',2)},'DisplayPropertyDefaults',struct('YLabelReal','','AxesColor',[0 0 0],'AxesTickCo"
-      "lor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 "
-      "1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.3921568627"
-      "45098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),'Disp"
-      "layLayoutDimensions',[2 1]),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false),extmgr.Confi"
-      "guration('Tools','Measurements',true,'Version','2019b')),'Version','2019b','Position',[174.2 186.2 957.2 376.4])"
+      "nYLimReal','-3.09944','MaxYLimReal','3.16293','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','3.16293','Leg"
+      "endVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274"
+      "509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6235294"
+      "11764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.7176470"
+      "58823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLab"
+      "el>','LinePropertiesCache',{{struct('Visible','on'),struct('Visible','on'),struct('Visible','on')}},'UserDefined"
+      "ChannelNames',{{}},'NumLines',2,'LineNames',{{'Gain1','Joint Angles'}},'ShowContent',true,'Placement',1)},'Displ"
+      "ayPropertyDefaults',struct('MinYLimReal','-3.09944','MaxYLimReal','3.16293','YLabelReal','','MinYLimMag','0.0000"
+      "0','MaxYLimMag','3.16293','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 "
+      "0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066666666666666"
+      "7;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83137254901960"
+      "8 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509803"
+      "92156863],'Title','%<SignalLabel>')),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'Pre"
+      "viousZoomMode','ZoomY'),extmgr.Configuration('Tools','Measurements',true,'Version','2019b')),'Version','2019b','"
+      "Position',[6.6 413.4 1528.4 376.4])"
       NumInputPorts	      "1"
       Floating		      off
     }
@@ -1926,8 +2009,17 @@ Model {
 	Branch {
 	  ZOrder		  672
 	  Points		  [0, 40]
-	  DstBlock		  "To File1"
-	  DstPort		  1
+	  Branch {
+	    ZOrder		    722
+	    Points		    [0, 45]
+	    DstBlock		    "Interpreted MATLAB\nFunction1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    721
+	    DstBlock		    "To File1"
+	    DstPort		    1
+	  }
 	}
 	Branch {
 	  ZOrder		  671
@@ -1973,9 +2065,18 @@ Model {
 	Points			[113, 0]
 	Branch {
 	  ZOrder		  670
-	  Points		  [0, -40]
-	  DstBlock		  "To File"
-	  DstPort		  1
+	  Points		  [0, -45; 5, 0]
+	  Branch {
+	    ZOrder		    725
+	    Points		    [0, -50]
+	    DstBlock		    "Interpreted MATLAB\nFunction"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    724
+	    DstBlock		    "To File"
+	    DstPort		    1
+	  }
 	}
 	Branch {
 	  ZOrder		  669
@@ -2017,10 +2118,12 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      695
+      ZOrder		      703
       SrcBlock		      "Sum4"
       SrcPort		      1
-      Points		      [91, 0; 0, 76]
+      Points		      [80, 0; 0, 155]
+      DstBlock		      "Gain1"
+      DstPort		      1
     }
     Line {
       Name		      "Hand Acceleration"
