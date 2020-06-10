@@ -21,7 +21,7 @@ form compared to the graph outputs of the MATLAB scripts
 ## How to Set Up the System: 
 **The Matlab portion of our simulation setup is as follows:**
 1. Download matlab and simulink. The campuswide licence is all you need. No other toolbox is necessary
-2. In the **__Controller**__ folder, open the file titled __TremorStabilizingSimulation.mdl__ in simulink. This is the entire model of the      stabilizing system
+2. In the **__Controller__** folder, open the file titled __TremorStabilizingSimulation.mdl__ in simulink. This is the entire model of the      stabilizing system
 3. In the center of the simulation, there are 3 disconnected arrows. Top down, they are:
   1. a sinusoidal 1 Hz source
   2. Sample orientation data from a hand 1
