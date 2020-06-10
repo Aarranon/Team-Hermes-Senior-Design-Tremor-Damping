@@ -30,3 +30,9 @@ form compared to the graph outputs of the MATLAB scripts
 4. Run the simulation. The viewers should pop up for PSD of the input/output, and a scope viewer of the signals involved. The sim will also output CSV formatted files into the Output folder, for both the input and the output data, which can be entered to other visualizing programs (see: blender simulation)
 
 **The Blender portion of our simulation setup is as follows:**
+1. Download Blender v2.80 (https://www.blender.org/download/releases/2-80/). As a side, make sure you also have Python 3 on your system as well.
+2. After opening the "rigging_fingers.blend" file, you'll notice that there are various modes of development on the top of the screen ("Animation", "Compositing", "Default Logic" etc.). Click on the **Scripting** tab.
+3. You'll need to edit two portions of this code, both of which pertain to a specific **path**. The first path you'll need to modify is in Line 11; edit it to the path of the output CSV file from the Matlab simulation.
+4. The other path you'll need to modify is the output of the animation in Line 33.
+5. The final step is to simply run the script (Option+P for Mac users) or simply go to the Edit tab below the script (NOT the Edit button next to File) and click "Run Script". 
+6. The animation should take a few minutes since it's rendered; once it's complete, you'll have the final visualization at the output path you detailed earlier.
