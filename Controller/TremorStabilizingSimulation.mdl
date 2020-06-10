@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.47"
+    ComputedModelVersion    "1.50"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -97,11 +97,22 @@ Model {
 	  LoadSaveID		  "0"
 	  Extents		  [3752.0, 1651.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-603.52605080071078, -395.46476080677184]
-	  SceneRectInView	  [-603.52605080071078, -395.46476080677184, 1500.8, 660.4]
+	  Offset		  [-636.89618951612908, -412.10080961416753]
+	  SceneRectInView	  [-636.89618951612908, -412.10080961416753, 1500.8, 660.4]
 	}
 	Object {
 	  $ObjectID		  6
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "106"
+	  Extents		  [3752.0, 1651.0]
+	  ZoomFactor		  [1.75]
+	  Offset		  [-174.63714285714116, -114.83523809523783]
+	  SceneRectInView	  [-174.63714285714116, -114.83523809523783, 857.6, 377.37142857142857]
+	}
+	Object {
+	  $ObjectID		  7
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -110,17 +121,6 @@ Model {
 	  ZoomFactor		  [1.75]
 	  Offset		  [-142.38867196813328, -143.63297869538877]
 	  SceneRectInView	  [-142.38867196813328, -143.63297869538877, 857.6, 377.37142857142857]
-	}
-	Object {
-	  $ObjectID		  7
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "106"
-	  Extents		  [3752.0, 1651.0]
-	  ZoomFactor		  [0.5]
-	  Offset		  [-1039.6085714285698, -396.37809523809506]
-	  SceneRectInView	  [-1039.6085714285698, -396.37809523809506, 3001.6, 1320.8]
 	}
 	Object {
 	  $ObjectID		  8
@@ -211,9 +211,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Aarranon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jun 08 21:29:39 2020"
-  RTWModifiedTimeStamp	  513552574
-  ModelVersionFormat	  "1.%<AutoIncrement:47>"
+  LastModifiedDate	  "Wed Jun 10 07:39:01 2020"
+  RTWModifiedTimeStamp	  513638926
+  ModelVersionFormat	  "1.%<AutoIncrement:50>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1356,8 +1356,163 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "242"
+    SIDHighWatermark	    "249"
     SimulinkSubDomain	    "Simulink"
+    Block {
+      BlockType		      Sin
+      Name		      "1 Hz Sine Source"
+      SID		      "229"
+      Ports		      [0, 1]
+      Position		      [-100, -221, -25, -189]
+      ZOrder		      507
+      Amplitude		      "30"
+      Frequency		      "2*2*pi"
+      SampleTime	      "0.0100000000000000002"
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		28
+	$ClassName		"Simulink.Mask"
+	Type			"DiscretizedSource"
+	Initialization		"%zoh"
+      }
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "5 Hz Tremor Source"
+      SID		      "230"
+      Ports		      [0, 1]
+      Position		      [135, -225, 165, -195]
+      ZOrder		      508
+      Amplitude		      "15"
+      Frequency		      "10*pi"
+      Phase		      "54"
+      SampleTime	      "0.0100000000000000002"
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		29
+	$ClassName		"Simulink.Mask"
+	Type			"DiscretizedSource"
+	Initialization		"%zoh"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Anglualr Data 1"
+      SID		      "106"
+      Ports		      [0, 1]
+      Position		      [-100, -90, -25, -50]
+      ZOrder		      375
+      ForegroundColor	      "red"
+      RequestExecContextInheritance off
+      System {
+	Name			"Anglualr Data 1"
+	Location		[-6, -6, 1543, 871]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"175"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  FromSpreadsheet
+	  Name			  "From Spreadsheet"
+	  SID			  "107"
+	  Ports			  [0, 1]
+	  Position		  [-155, -35, 80, 55]
+	  ZOrder		  14
+	  FileName		  "C:\\Users\\Aarranon\\Documents\\1-UniversityStuff\\Academics\\ClassDocuments\\Spring2020\\ECE 183DB\\G"
+	  "itRepo\\Controller\\samples\\pitch_1_original.csv"
+	  SheetName		  "pitch_1_original"
+	  OutDataTypeStr	  "double"
+	  TreatFirstColumnAs	  "Data"
+	  SampleTime		  "1/100"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Joint Angle Raw"
+	  SID			  "108"
+	  Position		  [315, 33, 345, 47]
+	  ZOrder		  -4
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "From Spreadsheet"
+	  SrcPort		  1
+	  Points		  [113, 0; 0, 30]
+	  DstBlock		  "Joint Angle Raw"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Angular Data 2\n"
+      SID		      "79"
+      Ports		      [0, 1]
+      Position		      [-100, -160, -25, -120]
+      ZOrder		      360
+      ForegroundColor	      "red"
+      RequestExecContextInheritance off
+      System {
+	Name			"Angular Data 2\n"
+	Location		[-6, -6, 1543, 871]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"175"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  FromSpreadsheet
+	  Name			  "From Spreadsheet"
+	  SID			  "80"
+	  Ports			  [0, 1]
+	  Position		  [-15, 2, 255, 108]
+	  ZOrder		  14
+	  FileName		  "samples\\pitch_original.csv"
+	  SheetName		  "pitch_original"
+	  TreatFirstColumnAs	  "Data"
+	  SampleTime		  "1/100"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Joint Angle Raw\n"
+	  SID			  "81"
+	  Position		  [315, 33, 345, 47]
+	  ZOrder		  -4
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "From Spreadsheet"
+	  SrcPort		  1
+	  Points		  [38, 0; 0, -15]
+	  DstBlock		  "Joint Angle Raw\n"
+	  DstPort		  1
+	}
+      }
+    }
     Block {
       BlockType		      Reference
       Name		      "Averaging\nPower Spectral\nDensity"
@@ -1410,7 +1565,7 @@ Model {
       SID		      "234"
       Position		      [30, 35, 60, 65]
       ZOrder		      512
-      Gain		      "5"
+      Gain		      "10"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -1430,7 +1585,7 @@ Model {
       Name		      "High Pass Filter\nTransfer Function"
       SID		      "233"
       Ports		      [1, 1]
-      Position		      [165, 172, 225, 208]
+      Position		      [-210, 157, -150, 193]
       ZOrder		      511
       BlockMirror	      on
       InputPortMap	      "u0"
@@ -1439,7 +1594,7 @@ Model {
       SampleTime	      "0.0100000000000000002"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		28
+	$ObjectID		30
 	$ClassName		"Simulink.Mask"
 	Type			"DiscretizedDiscreteTransferFcn"
 	Initialization		"%zoh"
@@ -1460,7 +1615,7 @@ Model {
       Name		      "Interpreted MATLAB\nFunction"
       SID		      "215"
       Ports		      [1]
-      Position		      [590, -180, 660, -150]
+      Position		      [505, -175, 575, -145]
       ZOrder		      494
       MATLABFcn		      "writeInputToFile"
       OutputDimensions	      "0"
@@ -1470,7 +1625,7 @@ Model {
       Name		      "Interpreted MATLAB\nFunction1"
       SID		      "216"
       Ports		      [1]
-      Position		      [590, 40, 660, 70]
+      Position		      [505, 35, 575, 65]
       ZOrder		      495
       MATLABFcn		      "writeOutputToFile"
       OutputDimensions	      "0"
@@ -1485,135 +1640,6 @@ Model {
       InputPortMap	      "u0"
       UpperLimit	      "5.5/0.46*0.5"
       LowerLimit	      "-5.5/0.46*0.5"
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "Measured Data (Hand Motion)"
-      SID		      "106"
-      Ports		      [0, 1]
-      Position		      [-30, -70, 10, -30]
-      ZOrder		      375
-      ForegroundColor	      "red"
-      RequestExecContextInheritance off
-      Port {
-	PortNumber		1
-	Name			"Hand Acceleration"
-      }
-      System {
-	Name			"Measured Data (Hand Motion)"
-	Location		[-6, -6, 1543, 871]
-	Open			off
-	PortBlocksUseCompactNotation off
-	SetExecutionDomain	off
-	ExecutionDomainType	"Deduce"
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"50"
-	SimulinkSubDomain	"Simulink"
-	Block {
-	  BlockType		  FromSpreadsheet
-	  Name			  "From Spreadsheet"
-	  SID			  "107"
-	  Ports			  [0, 1]
-	  Position		  [-5, 25, 80, 55]
-	  ZOrder		  14
-	  FileName		  "\\tremorx.csv"
-	  SheetName		  "tremorx"
-	  TreatFirstColumnAs	  "Data"
-	  SampleTime		  "1/104"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "g"
-	  SID			  "108"
-	  Position		  [315, 33, 345, 47]
-	  ZOrder		  -4
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  3
-	  SrcBlock		  "From Spreadsheet"
-	  SrcPort		  1
-	  DstBlock		  "g"
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "Motor Torque-omega constant"
-      SID		      "242"
-      Position		      [220, 35, 250, 65]
-      ZOrder		      519
-      Gain		      "5"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "Original Healthy Hand Data\n"
-      SID		      "79"
-      Ports		      [0, 1]
-      Position		      [-30, -130, 10, -90]
-      ZOrder		      360
-      ForegroundColor	      "red"
-      RequestExecContextInheritance off
-      System {
-	Name			"Original Healthy Hand Data\n"
-	Location		[-6, -6, 1543, 871]
-	Open			off
-	PortBlocksUseCompactNotation off
-	SetExecutionDomain	off
-	ExecutionDomainType	"Deduce"
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"175"
-	SimulinkSubDomain	"Simulink"
-	Block {
-	  BlockType		  FromSpreadsheet
-	  Name			  "From Spreadsheet"
-	  SID			  "80"
-	  Ports			  [0, 1]
-	  Position		  [155, 25, 240, 55]
-	  ZOrder		  14
-	  FileName		  "\\origx.csv"
-	  SheetName		  "origx"
-	  TreatFirstColumnAs	  "Data"
-	  SampleTime		  "1/104"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Speed"
-	  SID			  "81"
-	  Position		  [315, 33, 345, 47]
-	  ZOrder		  -4
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  1
-	  SrcBlock		  "From Spreadsheet"
-	  SrcPort		  1
-	  DstBlock		  "Speed"
-	  DstPort		  1
-	}
-      }
     }
     Block {
       BlockType		      Reference
@@ -1791,41 +1817,16 @@ Model {
       InitialConditionSetting "Auto"
     }
     Block {
-      BlockType		      Sin
-      Name		      "Sine Wave\nFunction"
-      SID		      "230"
-      Ports		      [0, 1]
-      Position		      [-180, -305, -150, -275]
-      ZOrder		      508
-      Amplitude		      "15"
-      Frequency		      "10*pi"
-      Phase		      "54"
-      SampleTime	      "0.0100000000000000002"
-      Object {
-	$PropName		"MaskObject"
-	$ObjectID		29
-	$ClassName		"Simulink.Mask"
-	Type			"DiscretizedSource"
-	Initialization		"%zoh"
-      }
-    }
-    Block {
-      BlockType		      Sin
-      Name		      "Sine Wave\nFunction1"
-      SID		      "229"
-      Ports		      [0, 1]
-      Position		      [-230, -240, -200, -210]
-      ZOrder		      507
-      Amplitude		      "30"
-      Frequency		      "2*2*pi"
-      SampleTime	      "0.0100000000000000002"
-      Object {
-	$PropName		"MaskObject"
-	$ObjectID		30
-	$ClassName		"Simulink.Mask"
-	Type			"DiscretizedSource"
-	Initialization		"%zoh"
-      }
+      BlockType		      Gain
+      Name		      "Scaling\n(1.25 for visibility, 1 for representative)"
+      SID		      "246"
+      Position		      [120, -308, 165, -262]
+      ZOrder		      523
+      BlockMirror	      on
+      Gain		      "1.25"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Sum
@@ -1876,7 +1877,7 @@ Model {
       SaturateOnIntegerOverflow	off
       Port {
 	PortNumber		1
-	Name			"Compensated Angles"
+	Name			"State Estimation"
       }
     }
     Block {
@@ -1884,7 +1885,7 @@ Model {
       Name		      "Sum4"
       SID		      "189"
       Ports		      [2, 1]
-      Position		      [-75, -235, -55, -215]
+      Position		      [85, -150, 105, -130]
       ZOrder		      466
       ForegroundColor	      "red"
       ShowName		      off
@@ -1895,7 +1896,7 @@ Model {
       SaturateOnIntegerOverflow	off
       Port {
 	PortNumber		1
-	Name			"Motor Angular Velocity"
+	Name			"Angle of Joint"
       }
     }
     Block {
@@ -1903,7 +1904,7 @@ Model {
       Name		      "To File"
       SID		      "209"
       Ports		      [1]
-      Position		      [650, -130, 710, -100]
+      Position		      [505, -130, 565, -100]
       ZOrder		      492
       Filename		      "Output/SystemInputData.mat"
       MatrixName	      "data"
@@ -1964,21 +1965,21 @@ Model {
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
-      "nYLimReal','-94.69952','MaxYLimReal','99.31049','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','99.31049','"
-      "LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686"
-      "274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6235"
-      "29411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.7176"
-      "47058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<Signal"
-      "Label>','LinePropertiesCache',{{struct('Visible','on'),struct('Visible','on'),struct('Visible','on')}},'UserDefi"
-      "nedChannelNames',{{}},'NumLines',2,'LineNames',{{'Input  (measured angular velocity of motor)','Joint Angles'}},"
-      "'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-94.69952','MaxYLimReal','99."
-      "31049','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','99.31049','LegendVisibility','On','XGrid',true,'YGri"
-      "d',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.68627450"
-      "9803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078"
-      "431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235"
-      "294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>')),extmgr.Configuration('Tools','P"
-      "lot Navigation',true,'OnceAtStop',false),extmgr.Configuration('Tools','Measurements',true,'Version','2019b')),'V"
-      "ersion','2019b','Position',[357.4 119.8 899.6 376.4])"
+      "nYLimReal','-117.30767','MaxYLimReal','125.29534','YLabelReal','','MinYLimMag',' 0.00000','MaxYLimMag','125.2953"
+      "4','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0"
+      ".686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0."
+      "623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0."
+      "717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<Si"
+      "gnalLabel>','LinePropertiesCache',{{struct('Visible','on'),struct('Visible','on'),struct('Visible','on')}},'User"
+      "DefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1)},'DisplayPropertyDef"
+      "aults',struct('MinYLimReal','-117.30767','MaxYLimReal','125.29534','YLabelReal','','MinYLimMag',' 0.00000','MaxY"
+      "LimMag','125.29534','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'"
+      "AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.07"
+      "45098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.07"
+      "45098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509803921568"
+      "63],'Title','%<SignalLabel>')),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false),extmgr.Co"
+      "nfiguration('Tools','Measurements',true,'Version','2019b')),'Version','2019b','Position',[307.4 312.2 899.6 376."
+      "4])"
       NumInputPorts	      "1"
       Floating		      off
     }
@@ -1993,25 +1994,18 @@ Model {
       ZOrder		      348
       SrcBlock		      "High Pass Filter\nTransfer Function"
       SrcPort		      1
-      Points		      [-430, 0]
+      Points		      [-55, 0]
       DstBlock		      "Sum"
       DstPort		      2
     }
     Line {
-      Name		      "Compensated Angles"
+      Name		      "State Estimation"
       ZOrder		      360
       Labels		      [2, 0]
       SrcBlock		      "Sum2"
       SrcPort		      1
-      Points		      [19, 0; 0, 140]
+      Points		      [19, 0; 0, 125]
       DstBlock		      "High Pass Filter\nTransfer Function"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      361
-      SrcBlock		      "Max Torque"
-      SrcPort		      1
-      DstBlock		      "Motor Torque-omega constant"
       DstPort		      1
     }
     Line {
@@ -2025,11 +2019,16 @@ Model {
 	ZOrder			622
 	Points			[0, -25; 51, 0]
 	Branch {
+	  ZOrder		  784
+	  DstBlock		  "Averaging\nPower Spectral\nDensity1"
+	  DstPort		  1
+	}
+	Branch {
 	  ZOrder		  672
 	  Points		  [0, 40]
 	  Branch {
 	    ZOrder		    722
-	    Points		    [0, 34; 104, 0]
+	    Points		    [0, 40]
 	    DstBlock		    "Interpreted MATLAB\nFunction1"
 	    DstPort		    1
 	  }
@@ -2038,11 +2037,6 @@ Model {
 	    DstBlock		    "To File1"
 	    DstPort		    1
 	  }
-	}
-	Branch {
-	  ZOrder		  671
-	  DstBlock		  "Averaging\nPower Spectral\nDensity1"
-	  DstPort		  1
 	}
       }
       Branch {
@@ -2060,21 +2054,20 @@ Model {
     }
     Line {
       ZOrder		      532
-      SrcBlock		      "Sine Wave\nFunction"
+      SrcBlock		      "5 Hz Tremor Source"
       SrcPort		      1
-      Points		      [80, 0]
-      DstBlock		      "Sum4"
+      Points		      [90, 0; 0, -75]
+      DstBlock		      "Scaling\n(1.25 for visibility, 1 for representative)"
       DstPort		      1
     }
     Line {
-      ZOrder		      533
-      SrcBlock		      "Sine Wave\nFunction1"
+      ZOrder		      834
+      SrcBlock		      "1 Hz Sine Source"
       SrcPort		      1
-      DstBlock		      "Sum4"
-      DstPort		      2
+      Points		      [55, 0; 0, 25]
     }
     Line {
-      ZOrder		      587
+      ZOrder		      813
       SrcBlock		      "Input \n(measured angular velocity of motor)"
       SrcPort		      1
       Points		      [65, 0]
@@ -2082,24 +2075,24 @@ Model {
 	ZOrder			624
 	Points			[113, 0]
 	Branch {
+	  ZOrder		  785
+	  DstBlock		  "Averaging\nPower Spectral\nDensity"
+	  DstPort		  1
+	}
+	Branch {
 	  ZOrder		  670
-	  Points		  [0, -45; 78, 0]
+	  Points		  [0, -45; 1, 0]
 	  Branch {
-	    ZOrder		    725
-	    Points		    [0, -50]
-	    DstBlock		    "Interpreted MATLAB\nFunction"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    724
+	    ZOrder		    814
 	    DstBlock		    "To File"
 	    DstPort		    1
 	  }
-	}
-	Branch {
-	  ZOrder		  669
-	  DstBlock		  "Averaging\nPower Spectral\nDensity"
-	  DstPort		  1
+	  Branch {
+	    ZOrder		    725
+	    Points		    [0, -45]
+	    DstBlock		    "Interpreted MATLAB\nFunction"
+	    DstPort		    1
+	  }
 	}
       }
       Branch {
@@ -2116,10 +2109,10 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      692
-      SrcBlock		      "Original Healthy Hand Data\n"
+      ZOrder		      824
+      SrcBlock		      "Angular Data 2\n"
       SrcPort		      1
-      Points		      [109, 0]
+      Points		      [-5, 0; 56, 0]
     }
     Line {
       ZOrder		      644
@@ -2136,12 +2129,10 @@ Model {
       DstPort		      1
     }
     Line {
-      Name		      "Hand Acceleration"
-      ZOrder		      772
-      Labels		      [0, 0]
-      SrcBlock		      "Measured Data (Hand Motion)"
+      ZOrder		      835
+      SrcBlock		      "Anglualr Data 1"
       SrcPort		      1
-      Points		      [100, 0; 0, -19]
+      Points		      [54, 0; 0, 7]
     }
     Line {
       ZOrder		      742
@@ -2151,20 +2142,28 @@ Model {
       DstPort		      1
     }
     Line {
-      Name		      "Motor Angular Velocity"
-      ZOrder		      773
-      Labels		      [1, 1]
+      Name		      "Angle of Joint"
+      ZOrder		      817
+      Labels		      [0, 0]
       SrcBlock		      "Sum4"
       SrcPort		      1
-      Points		      [238, 0; 0, 155]
+      Points		      [173, 0; 0, 39; -47, 0; 0, 31]
       DstBlock		      "Input \n(measured angular velocity of motor)"
       DstPort		      1
     }
     Line {
-      ZOrder		      761
-      SrcBlock		      "Motor Torque-omega constant"
+      ZOrder		      822
+      SrcBlock		      "Scaling\n(1.25 for visibility, 1 for representative)"
       SrcPort		      1
-      Points		      [38, 0]
+      Points		      [-67, 0; 0, 72; 47, 0]
+      DstBlock		      "Sum4"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      827
+      SrcBlock		      "Max Torque"
+      SrcPort		      1
+      Points		      [143, 0]
       Branch {
 	ZOrder			403
 	Points			[0, -55]
