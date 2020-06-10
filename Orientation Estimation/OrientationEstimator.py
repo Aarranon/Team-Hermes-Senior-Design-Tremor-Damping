@@ -15,10 +15,10 @@ from fusion import Fusion
 import numpy as np
 
 
-data = np.loadtxt('ztremor_data.csv', delimiter=',');
+data = np.loadtxt('samples/pitch_tremor.csv', delimiter=',');
 #loads data that is in the form of a csv with 
 #ax, ay, az, gx, gy, gz
-f= open("OutputOrientationy_tremor_z.csv","w+");
+f= open("samples/pitch_added_tremor.csv","w+");
 
 fuse = Fusion();
 
